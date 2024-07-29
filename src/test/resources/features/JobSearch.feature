@@ -12,6 +12,7 @@
       Examples:
         | Job                      | Country              |
         | test automation engineer | Zurich               |
+        | test automation engineer |Switzerland - Zürich  |
         | test engineer            | Bern                 |
 
 
@@ -26,6 +27,7 @@
       Examples:
         | Job                      | Country              |
         | test automation engineer | Zurich               |
+        | test automation engineer |Switzerland - Zürich  |
         | test engineer            | Bern                 |
 
     Scenario Outline:  test
@@ -39,6 +41,7 @@
       Examples:
         | Job                      | Country              |
         | test automation engineer | Zurich               |
+        | test automation engineer |Switzerland - Zürich  |
         | test engineer            | Bern                 |
 
 

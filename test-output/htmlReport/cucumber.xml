@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="13.676" tests="6" skipped="0" failures="3" errors="0">
-<testcase classname="Job search with country and occupation information" name="test1 - Example #1.1" time="5.261">
+<testsuite name="Cucumber" time="20.803" tests="9" skipped="0" failures="5" errors="0">
+<testcase classname="Job search with country and occupation information" name="test1 - Example #1.1" time="6.21">
 <failure type="java.lang.AssertionError">
 <![CDATA[java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
@@ -18,7 +18,25 @@ Given The Post request method is sent to the JobsSearch endpoint with the value 
 Then It is verified that the count value is smaller than Jobs Count.........failed
 ]]></system-out>
 </testcase>
-<testcase classname="Job search with country and occupation information" name="test1 - Example #1.2" time="1.687">
+<testcase classname="Job search with country and occupation information" name="test1 - Example #1.2" time="2.701">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.JobsSearchSteps.itIsVerifiedThatTheCountValueIsSmallerThanJobsCount(JobsSearchSteps.java:60)
+	at ✽.It is verified that the count value is smaller than Jobs Count.(file:///C:/Users/User/Desktop/UbsProject/src/test/resources/features/JobSearch.feature:10)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The Post request method is sent to the JobsSearch endpoint with the value "test automation engineer"..passed
+When The Jobs Count value is saved as Jobs Count............................passed
+And The number of jobs in country "Switzerland - Zürich"is saved as expected Count..passed
+Given The Post request method is sent to the JobsSearch endpoint with the value "test automation engineer" and "Switzerland - Zürich"..passed
+Then It is verified that the count value is smaller than Jobs Count.........failed
+]]></system-out>
+</testcase>
+<testcase classname="Job search with country and occupation information" name="test1 - Example #1.3" time="1.866">
 <system-out><![CDATA[
 Given The Post request method is sent to the JobsSearch endpoint with the value "test engineer"..passed
 When The Jobs Count value is saved as Jobs Count............................passed
@@ -27,7 +45,7 @@ Given The Post request method is sent to the JobsSearch endpoint with the value 
 Then It is verified that the count value is smaller than Jobs Count.........passed
 ]]></system-out>
 </testcase>
-<testcase classname="Job search with country and occupation information" name="test2 - Example #1.1" time="2.243">
+<testcase classname="Job search with country and occupation information" name="test2 - Example #1.1" time="1.784">
 <failure type="java.lang.AssertionError" message="expected:&lt;7&gt; but was:&lt;99&gt;">
 <![CDATA[java.lang.AssertionError: expected:<7> but was:<99>
 	at org.junit.Assert.fail(Assert.java:89)
@@ -35,7 +53,7 @@ Then It is verified that the count value is smaller than Jobs Count.........pass
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
 	at stepdefinitions.JobsSearchSteps.itIsVerifiedThatTheFoundCountValueInIsEqualToTheExpectedCountValue(JobsSearchSteps.java:83)
-	at ✽.It is verified that the found Count value in "Zurich" is equal to the expected Count value.(file:///C:/Users/User/Desktop/UbsProject/src/test/resources/features/JobSearch.feature:24)
+	at ✽.It is verified that the found Count value in "Zurich" is equal to the expected Count value.(file:///C:/Users/User/Desktop/UbsProject/src/test/resources/features/JobSearch.feature:25)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -46,7 +64,16 @@ Given The Post request method is sent to the JobsSearch endpoint with the value 
 And It is verified that the found Count value in "Zurich" is equal to the expected Count value..failed
 ]]></system-out>
 </testcase>
-<testcase classname="Job search with country and occupation information" name="test2 - Example #1.2" time="1.189">
+<testcase classname="Job search with country and occupation information" name="test2 - Example #1.2" time="1.646">
+<system-out><![CDATA[
+Given The Post request method is sent to the JobsSearch endpoint with the value "test automation engineer"..passed
+When The Jobs Count value is saved as Jobs Count............................passed
+And The number of jobs in country "Switzerland - Zürich"is saved as expected Count..passed
+Given The Post request method is sent to the JobsSearch endpoint with the value "test automation engineer" and "Switzerland - Zürich"..passed
+And It is verified that the found Count value in "Switzerland - Zürich" is equal to the expected Count value..passed
+]]></system-out>
+</testcase>
+<testcase classname="Job search with country and occupation information" name="test2 - Example #1.3" time="1.259">
 <system-out><![CDATA[
 Given The Post request method is sent to the JobsSearch endpoint with the value "test engineer"..passed
 When The Jobs Count value is saved as Jobs Count............................passed
@@ -55,14 +82,14 @@ Given The Post request method is sent to the JobsSearch endpoint with the value 
 And It is verified that the found Count value in "Bern" is equal to the expected Count value..passed
 ]]></system-out>
 </testcase>
-<testcase classname="Job search with country and occupation information" name="test - Example #1.1" time="1.581">
+<testcase classname="Job search with country and occupation information" name="test - Example #1.1" time="1.775">
 <failure type="java.lang.AssertionError">
 <![CDATA[java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at org.junit.Assert.assertTrue(Assert.java:53)
 	at stepdefinitions.JobsSearchSteps.itIsVerifiedThatThereIsNoCountryOtherThanTheFiltered(JobsSearchSteps.java:106)
-	at ✽.It is verified that there is no country other than the filtered "Zurich".(file:///C:/Users/User/Desktop/UbsProject/src/test/resources/features/JobSearch.feature:37)
+	at ✽.It is verified that there is no country other than the filtered "Zurich".(file:///C:/Users/User/Desktop/UbsProject/src/test/resources/features/JobSearch.feature:39)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -73,7 +100,25 @@ Given The Post request method is sent to the JobsSearch endpoint with the value 
 And It is verified that there is no country other than the filtered "Zurich"..failed
 ]]></system-out>
 </testcase>
-<testcase classname="Job search with country and occupation information" name="test - Example #1.2" time="1.253">
+<testcase classname="Job search with country and occupation information" name="test - Example #1.2" time="1.711">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.JobsSearchSteps.itIsVerifiedThatThereIsNoCountryOtherThanTheFiltered(JobsSearchSteps.java:106)
+	at ✽.It is verified that there is no country other than the filtered "Switzerland - Zürich".(file:///C:/Users/User/Desktop/UbsProject/src/test/resources/features/JobSearch.feature:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The Post request method is sent to the JobsSearch endpoint with the value "test automation engineer"..passed
+When The Jobs Count value is saved as Jobs Count............................passed
+And The number of jobs in country "Switzerland - Zürich"is saved as expected Count..passed
+Given The Post request method is sent to the JobsSearch endpoint with the value "test automation engineer" and "Switzerland - Zürich"..passed
+And It is verified that there is no country other than the filtered "Switzerland - Zürich"..failed
+]]></system-out>
+</testcase>
+<testcase classname="Job search with country and occupation information" name="test - Example #1.3" time="1.285">
 <system-out><![CDATA[
 Given The Post request method is sent to the JobsSearch endpoint with the value "test engineer"..passed
 When The Jobs Count value is saved as Jobs Count............................passed
